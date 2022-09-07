@@ -1,0 +1,79 @@
+[
+    {
+        "firstName": "Brenden", 
+        "lastName": "Wagner",
+        "country":"United States of America, California",
+        "nationality": "American", 
+        "company": "Facebook", 
+        "designation": "Software Engineer", 
+        "workExp": "8", 
+        "cv": "View",
+        "source": "Facebook"
+    },
+    { 
+        "firstName": "Cara", 
+        "lastName": "Stevens",
+        "country":"United States of America, New York",
+        "nationality": "American", 
+        "company": "Walmart", 
+        "designation": "Sales Assistant", 
+        "workExp": "5", 
+        "cv": "View", 
+        "source": "Google"
+    },
+    { 
+        "firstName": "Cedric", 
+        "lastName": "Kelly",
+        "country":"Scotland, Glasgow City",
+        "nationality": "Scottish", 
+        "company": "Data Tech", 
+        "designation": "Senior Javascript Developer", 
+        "workExp": "7", 
+        "cv": "View", 
+        "source": "Monster Gulf"
+    },
+    { 
+        "firstName": "Doris", 
+        "lastName": "Wider",
+        "country": "Australia, Queensland",
+        "nationality": "Australian", 
+        "company": "Telstra", 
+        "designation": "Support Engineer", 
+        "workExp": "3", 
+        "cv": "View", 
+        "source": "JobaDD"
+    },
+    { 
+        "firstName": "Jenny", 
+        "lastName": "Chang",
+        "country":"Singapore, Singapore",
+        "nationality": "Chinese", 
+        "company": "Singapore Airlines", 
+        "designation": "Regional Director", 
+        "workExp": "15", 
+        "cv": "View", 
+        "source": "Twitter"
+    },
+    { 
+        "firstName": "Juan", 
+        "lastName": "Dela Cruz",
+        "country":"Philippines, Makati",
+        "nationality": "Filipino", 
+        "company": "Jollibee", 
+        "designation": "Brand Manager", 
+        "workExp": "4", 
+        "cv": "View", 
+        "source": "Facebook"
+    },
+    { 
+        "firstName": "Adrien", 
+        "lastName": "Agreste",
+        "country":"France, Paris",
+        "nationality": "French", 
+        "company": "Gabriel", 
+        "designation": "Model", 
+        "workExp": "2", 
+        "cv": "View", 
+        "source": "Twitter"
+    }
+]

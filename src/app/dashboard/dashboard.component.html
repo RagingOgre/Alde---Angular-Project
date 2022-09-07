@@ -1,0 +1,32 @@
+<p-table [value]="employees" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Country</th>
+            <th>Nationality</th>
+            <th>Company</th>
+            <th>Designation</th>
+            <th>Work Exp</th>
+            <th>CV</th>
+            <th>Data Source</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-employees>
+        <tr>
+            <td>{{employees.firstName}}</td>
+            <td>{{employees.lastName}}</td>
+            <td>{{employees.country}}</td>
+            <td>{{employees.nationality}}</td>
+            <td>{{employees.company}}</td>
+            <td>{{employees.designation}}</td>
+            <td>{{employees.workExp}}</td>
+            <td>{{employees.cv}}</td>
+            <td>{{employees.source}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+<p-sidebar [(visible)] = "display">
+    Content
+</p-sidebar>
+<p-button type="text" (click)="display = true" icon="pi pi-plus" label="Show"></p-button>
