@@ -13,7 +13,7 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-employees>
-        <tr>
+        <tr (click)="display = true">
             <td>{{employees.firstName}}</td>
             <td>{{employees.lastName}}</td>
             <td>{{employees.country}}</td>
@@ -27,6 +27,53 @@
     </ng-template>
 </p-table>
 <p-sidebar [(visible)] = "display">
-    Content
+    <h5>Lead Information</h5>
+    <label>First Name</label>
+    <br>
+    <input type="text" pInputText value="{{employees['firstName']}}">
+    <br>
+    <br>
+    <label>Last Name</label>
+    <br>
+    <input type="text" pInputText>
+    <br>
+    <br>
+    <label>Country</label>
+    <br>
+    <input type="text" pInputText> 
+    <br>
+    <br>
+    <label>Nationality</label>
+    <br>
+    <input type="text" pInputText> 
+    <br>
+    <br>
+    <label>Company</label>
+    <br>
+    <input type="text" pInputText> 
+    <br>
+    <br>
+    <label>Designation</label>
+    <br>
+    <input type="text" pInputText> 
+    <br>
+    <br>
+    <label>Work Exp</label>
+    <br>
+    <input type="text" pInputText>
+    <br>
+    <br>
+    <label>CV</label>
+    <br>
+    <input type="file" pInputText>
+    <br>
+    <br>
+    <label>Data Source</label>
+    <br>
+    <input type="text" pInputText>
+    <br>
+    <br>
+    <button pButton type="button" label="Insert"></button>
+    <button pButton type="button" label="Clear" class="p-button-danger"></button>
 </p-sidebar>
 <p-button type="text" (click)="display = true" icon="pi pi-plus" label="Show"></p-button>

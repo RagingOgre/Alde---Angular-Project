@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
 
   employees = employeeData;
   
-  display = false;
+  display !: boolean;
 
   ngOnInit()
   {
