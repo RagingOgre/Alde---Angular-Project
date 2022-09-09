@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {SidebarModule} from 'primeng/sidebar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {Table, TableModule} from 'primeng/table';
+import {ToastModule} from 'primeng/toast';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     CardModule,
     SidebarModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
