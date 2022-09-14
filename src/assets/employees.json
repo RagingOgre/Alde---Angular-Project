@@ -8,7 +8,7 @@
         "designation": "Software Engineer", 
         "workExp": "8", 
         "cv": "View",
-        "dataSource": "Facebook"
+        "source": "Facebook"
     },
     { 
         "firstName": "Cara", 
@@ -19,7 +19,7 @@
         "designation": "Sales Assistant", 
         "workExp": "5", 
         "cv": "View", 
-        "dataSource": "Google"
+        "source": "Google"
     },
     { 
         "firstName": "Cedric", 
@@ -30,7 +30,7 @@
         "designation": "Senior Javascript Developer", 
         "workExp": "7", 
         "cv": "View", 
-        "dataSource": "Monster Gulf"
+        "source": "Monster Gulf"
     },
     { 
         "firstName": "Doris", 
@@ -41,7 +41,7 @@
         "designation": "Support Engineer", 
         "workExp": "3", 
         "cv": "View", 
-        "dataSource": "JobaDD"
+        "source": "JobaDD"
     },
     { 
         "firstName": "Jenny", 
@@ -52,7 +52,7 @@
         "designation": "Regional Director", 
         "workExp": "15", 
         "cv": "View", 
-        "dataSource": "Twitter"
+        "source": "Twitter"
     },
     { 
         "firstName": "Juan", 
@@ -63,7 +63,7 @@
         "designation": "Brand Manager", 
         "workExp": "4", 
         "cv": "View", 
-        "dataSource": "Facebook"
+        "source": "Facebook"
     },
     { 
         "firstName": "Adrien", 
@@ -74,6 +74,6 @@
         "designation": "Model", 
         "workExp": "2", 
         "cv": "View", 
-        "dataSource": "Twitter"
+        "source": "Twitter"
     }
 ]

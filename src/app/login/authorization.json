@@ -1,0 +1,36 @@
+[
+    {
+        "username" : "brendenWagner",
+        "password" : "admin"
+    },
+
+    {
+        "username" : "caraStevens",
+        "password" : "admin"
+    },
+
+    {
+        "username" : "cedricKelly",
+        "password" : "admin"
+    },
+
+    {
+        "username" : "dorisWider",
+        "password" : "admin"
+    },
+
+    {
+        "username" : "jennyChang",
+        "password" : "admin"
+    },
+
+    {
+        "username" : "juanDelaCruz",
+        "password" : "admin"
+    },
+
+    {
+        "username" : "adrienAgreste",
+        "password" : "admin"
+    }
+]

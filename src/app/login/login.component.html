@@ -1,15 +1,17 @@
 <p-card header = "Please Log In" [style] = "{width: '360px'}" styleClass = "p-card-shadow">
-    <div>
+  <form [formGroup] = "login">
+  <div>
       <span class = "p-float-label">
-        <input id = "float-input" type = "text" pInputText> 
-        <label for = "float-input">Username</label>
+        <input type = "text" pInputText formControlName = "username"> 
+        <label >Username</label>
       </span>
       <br>
       <span class = "p-float-label">
-        <input id = "float-input" type = "password" pInputText> 
-        <label for = "float-input">Password</label>
+        <input type = "password" pInputText formControlName = "password"> 
+        <label>Password</label>
       </span>
       <br>
-      <a routerLink="/dashboard"><p-button label = "Submit" ></p-button></a>
+      <a routerLink="/dashboard"><p-button label = "Login" type = "submit" (onClick) = "validate($event)"></p-button></a>
     </div>
+  </form>  
 </p-card>
