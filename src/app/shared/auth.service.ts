@@ -1,16 +1,20 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  isLoggedIn = false;
+  public isLoggedIn : boolean;
 
   constructor() { }
 
-  isAuthenticated()
+  get isAuthenticated()
   {
     return this.isLoggedIn;
   }
+
+ set isAuthenticated(isAuth : boolean)
+ {
+  this.isLoggedIn = isAuth;
+ }
 }
