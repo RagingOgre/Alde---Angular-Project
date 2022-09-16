@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, inject, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../shared/auth.service';
 
+import Employee from '../../assets/employees.json';
 import Authorization from './authorization.json';
 import { LoginService } from './login.service';
 
@@ -22,32 +23,31 @@ export class LoginComponent implements OnInit {
     }
   );
 
-  validate(event:any)
+  validate()
   {
 
     this.userInfo.user = this.login.value.username;
     this.userInfo.pass = this.login.value.password;
     this.userInfo.username = this.login.value.username;
     this.userInfo.password = this.login.value.password;
+
     
-    console.log(Authorization)
-    console.log(this.userInfo)
-
-    //foreach loop for authorization
-
      Authorization.forEach(entries => {
-      if(entries = this.userInfo)
+      for(let i = 0; i < Authorization.length; i++)
       {
-        console.log("true")
-        this.authServ.isAuthenticated = true;
+        if(entries.username == this.userInfo.username && entries.password == this.userInfo.password && this.userInfo.user != "" && this.userInfo.password != "")
+        {
+          this.authServ.isAuthenticated = true;
+          this.authServ.isLoggedIn = true
+          console.log(this.authServ.isAuthenticated)
+
+          break;
+        }
       }
-      else
-      {
-        console.log("false")
-        this.authServ.isAuthenticated = false;
-      }
-      
+      return this.authServ.isAuthenticated
     });
+    return this.authServ.isAuthenticated
+    
   }
 
   ngOnInit(): void 

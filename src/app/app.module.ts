@@ -9,6 +9,8 @@ import {CardModule} from 'primeng/card';
 import {SidebarModule} from 'primeng/sidebar';
 import {Table, TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
+import {MenubarModule} from 'primeng/menubar';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -34,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     TableModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ToastModule
+    ToastModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

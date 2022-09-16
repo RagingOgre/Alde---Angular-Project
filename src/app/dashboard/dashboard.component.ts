@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MenuItem } from 'primeng/api';
 import employeeData from '../../assets/employees.json';
+import { LoginService } from '../login/login.service';
+import { AuthService } from '../shared/auth.service';
 import { Employee } from './employee';
 
 @Component({
@@ -14,10 +17,11 @@ export class DashboardComponent implements OnInit {
 
   employees = employeeData;
   
-  display !: boolean;
+  display : boolean;
 
-  employee !: Employee[];
+  employee : MenuItem[];
   
+  constructor(public authServ: AuthService){}
   
   employeeInformation = new FormGroup(
     {
@@ -34,13 +38,16 @@ export class DashboardComponent implements OnInit {
   );
 
   dataEmployee : Array<any> = [];
-  newData: any = {};
 
   insertForm()
   {
     console.log(this.employeeInformation.value);
     this.dataEmployee.push(this.employeeInformation.value);
-    
+  }
+
+  logout()
+  {
+    this.authServ.isAuthenticated = false
   }
 
   transferData(event:any)
