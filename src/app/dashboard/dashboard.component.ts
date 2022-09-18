@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MenuItem } from 'primeng/api';
 import employeeData from '../../assets/employees.json';
 import { LoginService } from '../login/login.service';
 import { AuthService } from '../shared/auth.service';
-import { Employee } from './employee';
 
 @Component({
   
@@ -15,14 +13,21 @@ import { Employee } from './employee';
 })
 export class DashboardComponent implements OnInit {
 
-  employees = employeeData;
+  constructor(public authServ: AuthService, public loginServ: LoginService,){}
   
   display : boolean;
 
-  employee : MenuItem[];
+  employees = employeeData;
   
-  constructor(public authServ: AuthService){}
+  employee : Array<any>;
   
+
+  loginService : string;
+
+  checkNotDuplicate : boolean;
+  checkFirst : any;
+  checkLast : any;
+
   employeeInformation = new FormGroup(
     {
       firstName: new FormControl('', [Validators.required]),
@@ -37,12 +42,49 @@ export class DashboardComponent implements OnInit {
     }
   );
 
-  dataEmployee : Array<any> = [];
+
 
   insertForm()
   {
-    console.log(this.employeeInformation.value);
-    this.dataEmployee.push(this.employeeInformation.value);
+    const arrayCaster = this.employeeInformation.value as any
+    this.employees.forEach(entries => 
+      {
+        console.log(entries.firstName == arrayCaster.firstName && entries.lastName == arrayCaster.lastName)
+      
+          if(entries.firstName == arrayCaster.firstName && entries.lastName == arrayCaster.lastName)
+          {
+            entries.country = arrayCaster.country
+            entries.nationality = arrayCaster.nationality
+            entries.company = arrayCaster.company
+            entries.designation = arrayCaster.designation
+            entries.workExp = arrayCaster.workExp
+            entries.cv = arrayCaster.cv
+            entries.source = arrayCaster.source
+
+            this.employees.push();
+            this.checkNotDuplicate = false;
+            this.checkFirst = entries.firstName;
+            this.checkLast = entries.lastName;
+          }
+          else
+          {
+            this.checkNotDuplicate = true
+          }
+        
+      })
+    
+    if(this.checkNotDuplicate == true)
+    {
+      if(this.checkFirst == arrayCaster.firstName && this.checkLast == arrayCaster.lastName)
+      {
+        this.employees.push()
+      }
+      else
+      {
+        this.employees.push(arrayCaster);
+      }
+      
+    }
   }
 
   logout()
@@ -66,6 +108,7 @@ export class DashboardComponent implements OnInit {
         source: event.data.source
       }
     )
+    
   }
 
   resetForm()
@@ -75,6 +118,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit()
   {
+    this.loginService = this.loginServ.firstName + " " +this.loginServ.lastName
+    console.log(this.employees)
   }
 
 }

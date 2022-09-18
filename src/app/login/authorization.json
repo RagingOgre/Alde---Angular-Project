@@ -1,36 +1,50 @@
 [
     {
         "username" : "brendenWagner",
-        "password" : "admin"
+        "password" : "admin",
+        "firstName": "Brenden", 
+        "lastName": "Wagner"
     },
 
     {
         "username" : "caraStevens",
-        "password" : "admin"
+        "password" : "admin",
+        "firstName": "Cara", 
+        "lastName": "Stevens"
     },
 
     {
         "username" : "cedricKelly",
-        "password" : "admin"
+        "password" : "admin",
+        "firstName": "Cedric", 
+        "lastName": "Kelly"
     },
 
     {
         "username" : "dorisWider",
-        "password" : "admin"
+        "password" : "admin",
+        "firstName": "Doris", 
+        "lastName": "Wider"
     },
 
     {
         "username" : "jennyChang",
-        "password" : "admin"
+        "password" : "admin",
+        "firstName": "Jenny", 
+        "lastName": "Chang"
     },
 
     {
         "username" : "juanDelaCruz",
-        "password" : "admin"
+        "password" : "admin",
+        "firstName": "Juan", 
+        "lastName": "Dela Cruz"
     },
 
     {
         "username" : "adrienAgreste",
-        "password" : "admin"
+        "password" : "admin",
+        "firstName": "Adrien", 
+        "lastName": "Agreste"
     }
 ]

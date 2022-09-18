@@ -1,33 +1,36 @@
-
-<p-table [value] = "employees" selectionMode = "single" [(selection)] = "employee" dataKey = "firstName" responsiveLayout = "scroll" (onRowSelect)="transferData($event)">
-    <ng-template pTemplate = "header">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Country</th>
-            <th>Nationality</th>
-            <th>Company</th>
-            <th>Designation</th>
-            <th>Work Exp</th>
-            <th>CV</th>
-            <th>Data Source</th>
-        </tr>
+<p-card>
+    <ng-template pTemplate="header">
+        <label>Welcome, {{loginService}}</label>
     </ng-template>
-    <ng-template pTemplate="body" let-employees>
-        <tr [pSelectableRow] = "employees">
-            <td>{{employees.firstName}}</td>
-            <td>{{employees.lastName}}</td>
-            <td>{{employees.country}}</td>
-            <td>{{employees.nationality}}</td>
-            <td>{{employees.company}}</td>
-            <td>{{employees.designation}}</td>
-            <td>{{employees.workExp}}</td>
-            <td>{{employees.cv}}</td>
-            <td>{{employees.source}}</td>
-        </tr>
-    </ng-template>
-</p-table>
-
+    <p-table [value] = "employees" selectionMode = "single" [(selection)] = "employee" dataKey = "firstName" responsiveLayout = "scroll" (onRowSelect)="transferData($event)">
+        <ng-template pTemplate = "header">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Country</th>
+                <th>Nationality</th>
+                <th>Company</th>
+                <th>Designation</th>
+                <th>Work Exp</th>
+                <th>CV</th>
+                <th>Data Source</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-employees>
+            <tr [pSelectableRow] = "employees">
+                <td>{{employees.firstName}}</td>
+                <td>{{employees.lastName}}</td>
+                <td>{{employees.country}}</td>
+                <td>{{employees.nationality}}</td>
+                <td>{{employees.company}}</td>
+                <td>{{employees.designation}}</td>
+                <td>{{employees.workExp}}</td>
+                <td>{{employees.cv}}</td>
+                <td>{{employees.source}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-card>
 <p-sidebar [(visible)] = "display">
     <form  [formGroup] = "employeeInformation" >
         <h5>Lead Information</h5>

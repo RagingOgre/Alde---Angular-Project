@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
       {
         if(entries.username == this.userInfo.username && entries.password == this.userInfo.password && this.userInfo.user != "" && this.userInfo.password != "")
         {
+          this.userInfo.firstName = entries.firstName;
+          this.userInfo.lastName = entries.lastName;
           this.authServ.isAuthenticated = true;
           this.authServ.isLoggedIn = true
           console.log(this.authServ.isAuthenticated)
